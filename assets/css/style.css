@@ -1,0 +1,47 @@
+/* Your main styles at the top apply to the smallest screen/viewport,
+   e.g. width of 320 px */
+
+/* We're using badly-formed divs in place of semantic markup.
+   But even with semantic elements, you may need to change the
+   'display' property of block or inline elements so that you can
+   lay out the design according to the instruction image. */
+
+div.header span.img {
+    display: block;
+}
+
+
+
+/* This is our first breakpoint! If you change the orientation of the mobile
+   phone to horizontal, then the next width breakpoint is 480px (in our case). */
+
+@media screen and (min-width: 480px)
+{
+    /* Re-style here */
+    
+    /* Tip! Since we need floating columns, we can apply the floats here
+       and also the self-clearing container trick. */
+    
+    div.section:after {
+        content: " ";
+        display: table;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+    
+    div.section div.article {
+        float: left;
+    }
+}
+
+
+
+/* We're skipping a lot of possible breakpoints here ... */
+
+
+
+@media screen and (min-width: 1280px)
+{
+    /* Re-style here, if necessary! */
+}
